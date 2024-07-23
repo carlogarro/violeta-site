@@ -1,6 +1,7 @@
 header {
   background-color: #f7f9fb;
   position: sticky;
+  position: -webkit-sticky; /* Safari */
   top: 0;
   padding: 1.5em 5em 1.5em 5em;
   transition: background-color 0.4s ease-in-out;
@@ -11,10 +12,21 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 2rem;
   text-align: center;
   transition: color 0.1s ease-in-out;
   opacity: 0.98;
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  header nav {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    gap: 0;
+    flex-direction: column;
+  }
 }
 
 header nav a {
@@ -63,7 +75,7 @@ body {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 1em;
 }
 
 .container-row {
@@ -71,22 +83,24 @@ body {
 }
 
 .container h1 {
+  width: 100%;
   max-width: 500px;
-  flex: 1 1 500px;
+  flex: 1 1 auto;
   text-align: left;
   font-family: "Roboto";
   font-weight: 100;
 }
 
 .container img {
+  width: 100%;
   max-width: 500px;
-  flex: 1 1 500px; /*grow, shrink, basis*/
+  flex: 1 1 auto; /*grow, shrink, basis*/
   border-radius: 10px;
 }
 
 .container .text {
   max-width: 500px;
-  flex: 1 1 500px;
+  flex: 1 1 auto;
   font-size: 1rem;
   text-align: justify;
   font-family: "Roboto";

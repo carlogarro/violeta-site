@@ -53,7 +53,11 @@ header nav a {
     flex: 1 1 25%;
   }
   .nav-name {
+    max-width: 5em;
     text-align: center;
+  }
+  .nav-items {
+    max-width: 12em;
   }
 }
 

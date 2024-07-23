@@ -32,32 +32,31 @@ header nav a {
   font-family: "Roboto light";
   font-weight: 400;
   text-align: left;
-  flex: 2 2 auto;
+  flex: 1 1 30%;
 }
 
 .nav-items {
-  flex: 1 1 auto;
+  flex: 1 1 30%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
   header {
-    padding: 1.5em 0em 1.5em 0em;
+    padding: 1.5em 0.5em 1.5em 0.5em;
   }
   header nav {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   header nav a {
-    flex: 1 1 25%;
+    flex-basis: 50%;
   }
   .nav-name {
-    max-width: 5em;
-    text-align: center;
+    flex-basis: 30%;
   }
   .nav-items {
-    max-width: 12em;
+    flex-basis: 70%;
   }
 }
 

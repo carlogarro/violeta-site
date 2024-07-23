@@ -12,22 +12,12 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   text-align: center;
   transition: color 0.1s ease-in-out;
   opacity: 0.98;
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  header nav {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    gap: 0;
-    flex-direction: column;
-  }
-}
 
 header nav a {
   font-family: "Roboto";
@@ -35,15 +25,36 @@ header nav a {
   color: black;
   font-size: 1.3em;
   font-weight: 700;
-  margin: 1em;
   flex: 1 1 auto;
 }
 
-header nav a.name {
+.nav-name {
   font-family: "Roboto light";
   font-weight: 400;
   text-align: left;
-  flex: 20 20 auto;
+  flex: 2 2 auto;
+}
+
+.nav-items {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding: 1.5em 0em 1.5em 0em;
+  }
+  header nav {
+    justify-content: space-between;
+  }
+  header nav a {
+    flex: 1 1 25%;
+  }
+  .nav-name {
+    text-align: center;
+  }
 }
 
 header.scrolled {

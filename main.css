@@ -1,0 +1,94 @@
+header {
+  background-color: #f7f9fb;
+  position: sticky;
+  top: 0;
+  padding: 1.5em 5em 1.5em 5em;
+  transition: background-color 0.4s ease-in-out;
+}
+
+header nav {
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  text-align: center;
+  transition: color 0.1s ease-in-out;
+  opacity: 0.98;
+}
+
+header nav a {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 1em;
+  flex: 1 1 auto;
+}
+
+header nav a.name {
+  font-family: "Roboto light";
+  font-weight: 400;
+  text-align: left;
+  flex: 20 20 auto;
+}
+
+header.scrolled {
+  background-color: #31708e;
+}
+
+header.scrolled nav a {
+  color: white;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav a:hover {
+  color: #8fc1e3;
+}
+
+.active {
+  border-bottom: 5px solid powderblue;
+}
+
+body {
+  background-color: #f7f9fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Research */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.container-row {
+  flex-direction: column;
+}
+
+.container h1 {
+  max-width: 500px;
+  flex: 1 1 500px;
+  text-align: left;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+.container img {
+  max-width: 500px;
+  flex: 1 1 500px; /*grow, shrink, basis*/
+  border-radius: 10px;
+}
+
+.container .text {
+  max-width: 500px;
+  flex: 1 1 500px;
+  font-size: 1rem;
+  text-align: justify;
+  font-family: "Roboto";
+  font-weight: 400;
+}
